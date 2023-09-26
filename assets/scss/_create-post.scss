@@ -1,0 +1,99 @@
+.create-posts {
+
+width: 100%;
+@include flex(center, center);
+
+.create-post {
+    @include flex(space-between,center);
+    margin: rem(20);
+    padding: rem(10);
+    background-color: white;
+    box-shadow: 1px 0 #0000000d;
+    border-radius: rem(10);
+    width: 105rem;
+
+    @extend %content-component;
+    
+
+    .add-img{
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .input-box {
+        &__text {
+            padding: rem(5);
+            margin: rem(0.2);
+            @include flex(space-between, center, 10);
+            label {width: 100%;}
+            input {
+                margin: rem(2);
+                @include round-box(40, #efefef);
+                width: 33rem;
+                font-size: rem(15);
+    
+    
+            }
+            img {
+                @include img-rounded(40)
+
+
+            }
+        }
+
+
+span{
+    margin: rem(5);
+}
+
+        
+    }
+}
+
+@media screen and (max-width:500px){
+    .create-post {
+margin-right: 45px;
+    width: 28rem;
+    @include  flex(space-between);
+
+        
+    
+        .add-img{
+            width: 50px;
+            height: 50px;
+        }
+    
+    
+        .input-box {
+            &__text {
+                padding: rem(5);
+                margin: rem(0.2);
+                @include flex(space-between, center, 10);
+                label {width:90px;}
+                input {
+                    margin: rem(10);
+                    @include round-box(40, #efefef);
+                    width: 19rem;
+                    font-size: rem(15);
+        
+        
+                }
+                img {
+                    @include img-rounded(40)
+    
+    
+                }
+            }
+    
+    
+    span{
+        margin: rem(5);
+    }
+    
+            
+        }
+    }
+}
+
+}

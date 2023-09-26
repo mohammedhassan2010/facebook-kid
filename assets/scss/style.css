@@ -1,0 +1,721 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+body::before {
+  content: "";
+  display: block;
+  height: 80px;
+}
+body a {
+  text-decoration: none;
+  color: none;
+}
+
+@media screen and (max-width: 500px) {
+  body::before {
+    content: "";
+    display: block;
+    height: 120px;
+  }
+}
+.create-posts .create-post, .facebook-contacts__contact, .facebook-pages__page, .facebook-shortcuts__shortcut, .facebook-favorites__favorite {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.3125rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.mobile-swim-slide {
+  position: fixed;
+  height: 400vh;
+  width: 200vw;
+  background-color: #fff;
+  z-index: 9999;
+  max-width: 0;
+  overflow-y: auto;
+  max-height: 400vh;
+  padding-bottom: 10px;
+}
+.mobile-swim-slide hr {
+  margin: 10px 0;
+}
+.mobile-swim-slide i {
+  font-size: 1.4rem;
+}
+.mobile-swim-slide .profile-box {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  padding: 5px;
+  margin: 8px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 3px 2px 3px 2px rgba(0, 0, 0, 0.199);
+  background-color: whitesmoke;
+}
+.mobile-swim-slide .user-img-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.4rem;
+}
+.mobile-swim-slide .user-img-name-arrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+.mobile-swim-slide .profile-box__img {
+  width: 5rem;
+  max-height: 5.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.mobile-swim-slide .arrow-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.4rem;
+  background-color: #e4e4e4;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.mobile-swim-slide .create-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  margin: 8px;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+}
+.mobile-swim-slide .plus-icon {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.4rem;
+  background-color: #e4e4e4;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.mobile-swim-slide .shortcuts {
+  opacity: 0;
+  display: flex;
+  justify-content: baseline;
+  width: 100%;
+  margin-left: 10px;
+  flex-wrap: wrap;
+}
+.mobile-swim-slide .shortcuts .shortcuts__shortcut {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 8px;
+  display: flex;
+  box-shadow: 3px 2px 3px 2px rgba(0, 0, 0, 0.199);
+  flex-direction: column;
+  justify-content: start;
+  width: 32%;
+  background-color: whitesmoke;
+}
+.mobile-swim-slide .more-settings {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  flex-direction: column;
+}
+.mobile-swim-slide .more-settings .more-settings__setting {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 8px;
+  display: flex;
+  box-shadow: 3px 2px 3px 2px rgba(0, 0, 0, 0.199);
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 69%;
+  background-color: whitesmoke;
+}
+.mobile-swim-slide .more-settings .more-settings__setting p {
+  padding: 10px;
+}
+
+.page-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  gap: 0.625rem;
+  padding: 0.625rem;
+}
+.page-content__left .wrapper, .page-content__right .wrapper {
+  position: sticky;
+  top: 5rem;
+}
+.page-content__left {
+  flex: 25% 0 0;
+  max-width: 22.5rem;
+}
+.page-content__middle {
+  flex: 50% 0 0;
+  max-width: 42.5rem;
+}
+.page-content__right {
+  flex: 25% 0 0;
+  max-width: 22.5rem;
+}
+@media screen and (max-width: 500px) {
+  .page-content__left, .page-content__right {
+    display: none;
+  }
+}
+
+nav, .nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 15px 5px;
+  box-shadow: 0 0.1875rem 0.5rem rgba(0, 0, 0, 0.0509803922);
+}
+nav__left, .nav__left {
+  flex: 25% 0 0;
+  max-width: 22.5rem;
+}
+nav__middle, .nav__middle {
+  flex: 50% 0 0;
+  max-width: 42.5rem;
+}
+nav__middle .menu, .nav__middle .menu {
+  display: none;
+}
+nav__right, .nav__right {
+  flex: 25% 0 0;
+  max-width: 22.5rem;
+}
+nav .input-box__text, .nav .input-box__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+nav .input-box__text .responsive-icons, .nav .input-box__text .responsive-icons {
+  display: none;
+}
+nav .input-box__text label, .nav .input-box__text label {
+  width: 100%;
+}
+nav .input-box__text input, .nav .input-box__text input {
+  border: none;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  background-color: #efefef;
+  width: inherit;
+  font-size: 0.9375rem;
+}
+nav .facebook-icons, .nav .facebook-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.8rem;
+  color: #656565;
+}
+nav .facebook-icons .active, .nav .facebook-icons .active {
+  color: #1b75e5;
+}
+nav i:hover, .nav i:hover {
+  color: #1b75e5;
+  cursor: pointer;
+}
+nav .facebook-services, .nav .facebook-services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.625rem;
+}
+nav .facebook-services .img-rounded, .nav .facebook-services .img-rounded {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+nav .facebook-services .sign, .nav .facebook-services .sign {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+nav .facebook-services .sign:hover, .nav .facebook-services .sign:hover {
+  background-color: #6610f2;
+  cursor: pointer;
+}
+nav .facebook-services .dropdown, .nav .facebook-services .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .facebook-services .dropdown-content, .nav .facebook-services .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+nav .facebook-services .dropdown-content li, .nav .facebook-services .dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+nav .facebook-services .dropdown-content li:hover, .nav .facebook-services .dropdown-content li:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav .facebook-services .dropdown:hover .dropdown-content, .nav .facebook-services .dropdown:hover .dropdown-content {
+  display: block;
+}
+nav .facebook-services__service, .nav .facebook-services__service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 500px) {
+  nav, .nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+    flex-direction: column;
+    padding: 15px 5px;
+    box-shadow: 0 0.1875rem 0.5rem rgba(0, 0, 0, 0.0509803922);
+  }
+  nav__left, .nav__left {
+    width: 100%;
+    flex: none;
+  }
+  nav__middle, .nav__middle {
+    flex: none;
+    width: 100%;
+  }
+  nav__middle .facebook-icons__icon, .nav__middle .facebook-icons__icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  nav__middle .menu, .nav__middle .menu {
+    display: block;
+  }
+  nav__right, .nav__right {
+    display: none;
+  }
+  nav .input-box__text, .nav .input-box__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  nav .input-box__text .responsive-icons, .nav .input-box__text .responsive-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+    flex-direction: row;
+    margin-left: 230px;
+  }
+  nav .input-box__text .responsive-icons .responsive-icons__icon, .nav .input-box__text .responsive-icons .responsive-icons__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background-color: #e4e4e4;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+  }
+  nav .input-box__text label, .nav .input-box__text label {
+    width: 100%;
+  }
+  nav .input-box__text input, .nav .input-box__text input {
+    display: none;
+  }
+}
+.seperator {
+  border-top: 1px solid #ccc;
+  padding: 0.625rem;
+  margin-top: 0.625rem;
+}
+
+.facebook-favorites__favorite .favorite-img img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.facebook-shortcuts {
+  list-style: none;
+}
+.facebook-shortcuts__shortcut {
+  padding: 0.625rem 0;
+}
+.facebook-shortcuts__shortcut i {
+  color: #1b75e5;
+  font-size: 1.4rem;
+}
+
+.facebook-sponsers__sponser {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.625rem;
+  margin: 0.625rem 0;
+}
+.facebook-sponsers__sponser img {
+  max-width: 120px;
+  border-radius: 0.3125rem;
+}
+
+.facebook-pages__page img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.facebook-contacts {
+  position: sticky;
+  top: 0;
+}
+.facebook-contacts__contact img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.stories .story {
+  width: 200rem;
+  height: 11.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.625rem;
+  flex-direction: column;
+  padding: 0.625rem;
+  margin: unset;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1254901961);
+  background-color: rgba(0, 0, 0, 0.2509803922);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+.stories .story.story-1 {
+  background-image: url("https://picsum.photos/id/18/100/180");
+}
+.stories .story.story-2 {
+  background-image: url("https://picsum.photos/id/22/100/180");
+}
+.stories .story.story-3 {
+  background-image: url("https://picsum.photos/id/30/100/180");
+}
+.stories .story.story-4 {
+  background-image: url("https://picsum.photos/id/60/100/180");
+}
+.stories .story.story-5 {
+  background-image: url("https://picsum.photos/id/10/100/180");
+}
+.stories .story.story-6 {
+  background-image: url("https://picsum.photos/id/24/100/180");
+}
+.stories .story img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #1b75e5;
+  outline: 1px solid white;
+}
+.stories .story__username {
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7215686275);
+}
+
+@media (max-width: 500px) {
+  .stories {
+    margin-left: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 0.625rem;
+    overflow-x: auto;
+    width: 130vw;
+  }
+  .stories .story {
+    min-width: 10rem;
+    min-height: 15rem;
+  }
+}
+.create-posts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.create-posts .create-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 1.25rem;
+  padding: 0.625rem;
+  background-color: white;
+  box-shadow: 1px 0 rgba(0, 0, 0, 0.0509803922);
+  border-radius: 0.625rem;
+  width: 105rem;
+}
+.create-posts .create-post .add-img {
+  width: 50px;
+  height: 50px;
+}
+.create-posts .create-post .input-box__text {
+  padding: 0.3125rem;
+  margin: 0.0125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+.create-posts .create-post .input-box__text label {
+  width: 100%;
+}
+.create-posts .create-post .input-box__text input {
+  margin: 0.125rem;
+  border: none;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  background-color: #efefef;
+  width: 33rem;
+  font-size: 0.9375rem;
+}
+.create-posts .create-post .input-box__text img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.create-posts .create-post .input-box span {
+  margin: 0.3125rem;
+}
+@media screen and (max-width: 500px) {
+  .create-posts .create-post {
+    margin-right: 45px;
+    width: 28rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .create-posts .create-post .add-img {
+    width: 50px;
+    height: 50px;
+  }
+  .create-posts .create-post .input-box__text {
+    padding: 0.3125rem;
+    margin: 0.0125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .create-posts .create-post .input-box__text label {
+    width: 90px;
+  }
+  .create-posts .create-post .input-box__text input {
+    margin: 0.625rem;
+    border: none;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    background-color: #efefef;
+    width: 19rem;
+    font-size: 0.9375rem;
+  }
+  .create-posts .create-post .input-box__text img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .create-posts .create-post .input-box span {
+    margin: 0.3125rem;
+  }
+}
+
+.facebook-posts__post {
+  background-color: white;
+  border-radius: 0.625rem;
+  margin: 10px;
+}
+.facebook-posts__post .profile {
+  display: flex;
+  justify-content: space-between;
+}
+.facebook-posts__post .profile-information {
+  display: flex;
+  justify-content: flex-start;
+}
+.facebook-posts__post .profile-img {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0.625rem;
+}
+.facebook-posts__post .sender-name {
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.facebook-posts__post .more {
+  margin-top: 8px;
+  margin-right: 10px;
+  background-color: #e4e4e4;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 12px;
+  cursor: pointer;
+}
+.facebook-posts__post .dropdown {
+  position: relative;
+  display: block;
+}
+.facebook-posts__post .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.facebook-posts__post .dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.facebook-posts__post .dropdown-content li:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.facebook-posts__post .dropdown:hover .dropdown-content {
+  display: block;
+}
+.facebook-posts__post .post-text {
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0.625rem;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+.facebook-posts__post .post-img {
+  width: 700px;
+  height: 370px;
+  padding: 10px;
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+}
+@media screen and (max-width: 500px) {
+  .facebook-posts .facebook-posts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .facebook-posts__post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 28rem;
+    margin-left: 1.5rem;
+  }
+  .facebook-posts__post .dropdown-content {
+    transform: translate(-80px);
+  }
+  .facebook-posts__post .post-text {
+    margin: 10px;
+    text-align: left;
+  }
+  .facebook-posts__post .post-img {
+    width: 28rem;
+    height: 370px;
+    padding: 10px;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+  }
+}/*# sourceMappingURL=style.css.map */

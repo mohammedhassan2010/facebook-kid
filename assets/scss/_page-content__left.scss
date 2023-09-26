@@ -1,0 +1,32 @@
+
+.seperator {
+    border-top:1px solid #ccc;
+    padding: $primary-padding;
+    margin-top: $primary-padding;
+}
+.facebook-favorites {
+    
+    &__favorite{
+        @extend %content-component;
+        .favorite-img{
+            img {
+                @include img-rounded(40);
+
+            }
+        }
+    }
+    
+}
+
+.facebook-shortcuts {
+    list-style: none;
+    &__shortcut{
+        @extend %content-component;
+        padding: rem(10)  0;
+        i {
+            color: $active-color;
+            font-size: 1.4rem;
+        }
+    }
+    
+}

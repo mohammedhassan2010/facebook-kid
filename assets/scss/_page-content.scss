@@ -1,0 +1,29 @@
+.page-content {
+    position: relative;
+    @include flex(space-between, top);
+    padding: $primary-padding;
+    &__left , &__right {
+        .wrapper{
+            position: sticky;
+            top: 5rem;
+        }
+    }
+
+    &__left {
+         flex: 25% 0 0 ;
+         max-width: $sidebar-width;
+    }
+    &__middle {
+        flex: 50% 0 0;
+        max-width: $feed-width;
+    }
+     &__right {
+        flex: 25% 0 0;
+        max-width: $sidebar-width;
+    }
+    @media screen and (max-width:500px) {
+        &__left, &__right{
+            display: none;
+        }
+    }
+}

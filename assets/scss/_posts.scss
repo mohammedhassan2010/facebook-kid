@@ -1,0 +1,120 @@
+.facebook-posts {
+   
+   &__post {
+      background-color: white;
+      border-radius: rem(10);
+      margin: 10px;
+        .profile {
+            display: flex;
+            // width: 100%;
+            justify-content: space-between;
+        }
+        .profile-information {
+       display: flex;
+       justify-content: flex-start;
+        }
+         .profile-img {
+            @include img-rounded(60);
+            padding: $primary-padding;
+         }
+         .sender-name {
+            font-size: 22px;
+            font-family: sans-serif;
+            font-weight: 500;
+            margin-top: 15px;
+         }
+         .more {
+            margin-top: 8px;
+            margin-right: 10px;
+            background-color: $icon-background;
+            @include circle-icon(50);
+            font-size: 20px; 
+            text-align: center;
+            padding-top: 12px;
+            
+            cursor: pointer;
+         }
+
+         .dropdown {
+            position: relative;
+            display: block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content li {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content li:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+          
+          .dropdown:hover .dropdown-content {display: block;}
+
+         .post-text {
+            font-size: rem(20);
+            text-align: center;
+            padding: $primary-padding;
+            font-family: sans-serif;
+            font-weight: 500;
+         }
+         .post-img {
+            width: 700px;
+            height: 370px;
+            padding: 10px;
+            border-bottom-left-radius: rem(20);
+            border-bottom-right-radius: rem(20);
+         }
+    }
+
+
+    @media screen and (max-width:500px){
+      .facebook-posts{
+         width: 100%;
+         @include flex(center);
+         
+         
+      }
+    
+      &__post {
+          display: flex;
+         
+          flex-direction: column;
+          justify-content: center;
+          width: 28rem;
+         margin-left: 1.5rem;
+
+         .dropdown-content {
+transform: translate(-80px);
+          }
+            .post-text{
+               margin: 10px;
+               text-align: left;
+            }
+
+          .post-img {
+            width: 28rem;
+            height: 370px;
+            padding: 10px;
+            border-bottom-left-radius: rem(20);
+            border-bottom-right-radius: rem(20);
+         }
+      }
+   }
+}
+
+

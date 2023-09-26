@@ -1,0 +1,18 @@
+select {
+  margin-left: 10px;
+  width: 97%;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+@media screen and (max-width: 370px) {
+  select {
+    margin-left: 25px;
+    width: 93%;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}

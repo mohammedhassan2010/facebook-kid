@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <title>Settings</title>
+  </head>
+  <body class="bg-slate-200 flex">
+    <div class="bg-neutral-200 shadow-2xl w-1/5 py-2.5 h-[45.5rem]">
+      <h1 class="text-3xl border-x-0 border-solid border-black border-b-2 p-4">
+        DashBoard
+      </h1>
+      <ul>
+        <li class="p-4">
+          <a href="./dashbord.html"><i class="ri-home-2-fill"></i> Home</a>
+        </li>
+        <li class="p-4 settings">
+          <a href="./settings.html">
+            <i class="ri-settings-5-fill"></i> settings</a
+          >
+        </li>
+        <li class="p-4"><i class="ri-pages-fill"></i> pages</li>
+      </ul>
+    </div>
+    <div>
+      <h1 class="p-[1rem] m-[0.500rem] text-[2rem]">Change Theme</h1>
+      <div
+        class="items-center rounded-md flex justify-between p-[1rem] m-[1rem] bg-gray-200 shadow-2xl w-[70rem] h-[7rem]"
+      >
+        <h3 class="p-[1rem] m-[0.500rem] text-[1.5rem]">dark theme</h3>
+        <input
+          type="checkbox"
+          class="duration-300 appearance-none w-9 focus:outline-none checked:bg-green-500 h-[1.3rem] bg-zinc-950 rounded-full before:inline-block before:rounded-full before:bg-white before:h-4 before:w-4 checked:before:translate-x-full shadow-inner transition-all duration-300 before:ml-0.5 before:mb-[0.5px]"
+        />
+      </div>
+    </div>
+  </body>
+</html>

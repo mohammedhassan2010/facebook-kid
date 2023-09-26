@@ -1,0 +1,184 @@
+
+
+nav , .nav {
+    background-color: white;
+ 
+position: fixed;
+top: 0;
+z-index: 999;
+width: 100%;
+    @include flex(space-between, center);
+  
+    padding: 15px 5px;
+    box-shadow: 0 rem(3) rem(8) #0000000d;
+
+    &__left {
+        flex: 25% 0 0 ;
+        max-width: $sidebar-width;
+   }
+   &__middle {
+
+       flex: 50% 0 0;
+       max-width: $feed-width;
+       .menu {
+        display: none;
+       }
+   }
+    &__right {
+       flex: 25% 0 0;
+       max-width: $sidebar-width;
+   }
+
+
+
+   .input-box {
+    &__text {
+    .responsive-icons{
+        display: none;
+        
+    }
+        @include flex(space-between, center, 10);
+        label {width: 100%;}
+        input {
+            @include round-box(40, #efefef);
+            width: inherit;
+            font-size: rem(15);
+           
+
+        } 
+    }
+   }
+
+   .facebook-icons {
+    @include flex(space-around, center);
+    font-size: 1.8rem;
+    color: $icon-color;
+
+    .active{
+        color: $active-color;
+    }
+   }
+   i:hover{
+    color: $active-color;
+    cursor: pointer;
+   }
+
+   .facebook-services {
+    @include flex(space-around, center);
+    .img-rounded {
+    @include img-rounded(40)
+
+        }
+        .sign {
+            background-color: #0d6efd;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            border-radius: 5px
+        }
+        .sign:hover {
+            background-color: #6610f2; 
+            cursor: pointer;
+        }
+
+
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content li {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content li:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+          
+          .dropdown:hover .dropdown-content {display: block;}
+          
+
+        &__service{
+            @include flex(center, center);
+            @include circle-icon(40);
+            background-color: $icon-background;
+            font-size: 1.4rem;
+        }
+    }
+
+}
+ 
+
+
+@media screen and (max-width:500px){
+    
+
+nav , .nav {
+    
+    background-color: white;
+    @include flex(space-between, center);
+    flex-direction: column;
+    padding: 15px 5px;
+    box-shadow: 0 rem(3) rem(8) #0000000d;
+
+    &__left {
+
+       width: 100%;
+       flex: none;
+   }
+   &__middle {
+
+       flex:none;
+       width: 100%;
+       .facebook-icons__icon{
+        @include flex(space-between);
+       }
+       .menu {
+        display: block;
+       }
+   }
+    &__right {
+    display: none;
+   }
+
+
+
+   .input-box {
+       &__text {
+    @include flex(space-between, center, 10);
+
+    .responsive-icons{
+        @include flex(space-between);
+        flex-direction: row;
+        margin-left: 230px;
+        .responsive-icons__icon {
+                @include flex();
+                background-color: $icon-background;
+                @include circle-icon(40);
+                font-size: 1.4rem;
+        }   
+    }
+        label {width: 100%;}
+        input {display: none;} 
+    }
+   }
+
+
+}
+    
+}

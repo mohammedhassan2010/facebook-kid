@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+
+    <link rel="stylesheet" href="assets/scss/style.css" />
+    <title>FaceBook</title>
+  </head>
+
+  <body>
+    <div class="containr">
+      <div>
+        <div class="mobile-swim-slide"></div>
+        <nav class="nav">
+          <div class="nav__left">
+            <div class="input-box__text">
+              <div class="facebook-logo">
+                <img
+                  src="/assets/image/facebookKids.png "
+                  class="logo-img"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </div>
+              <div class="responsive-icons">
+                <div class="responsive-icons__icon">
+                  <i class="ri-search-line"></i>
+                </div>
+                <div class="responsive-icons__icon">
+                  <i class="ri-add-line"></i>
+                </div>
+                <div class="responsive-icons__icon">
+                  <i class="ri-messenger-fill"></i>
+                </div>
+              </div>
+
+              <label for="search-input">
+                <input
+                  type="search"
+                  id="search-input"
+                  placeholder="Search Facebook"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="nav__middle">
+            <div class="facebook-icons">
+              <div class="facebook-icons__icon active home">
+                <i class="ri-home-fill"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <a href="./assets/video/index.html">
+                  <i class="ri-movie-line"></i>
+                </a>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-store-2-line"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-contacts-fill"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-microsoft-line"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-menu-fill menu"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__right">
+            <div class="facebook-services">
+              <div class="user-icon , dropdown">
+                <!-- <a href="./sign in/index.html"> -->
+                <button class="sign">Sign Up</button>
+                <!-- </a> -->
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-grid-line"></i>
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-messenger-fill"></i>
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-notification-4-fill"></i>
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-arrow-down-s-fill"></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="page-content">
+        <section class="page-content__left">
+          <div class="wrapper">
+            <ul class="facebook-shortcuts">
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-user-fill"></i>
+                <span class="facebook-shortcuts__shortcut--text">Friends</span>
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-group-2-line"></i>
+                <span class="facebook-shortcuts__shortcut--text">Groups</span>
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-movie-line"></i>
+                <span class="facebook-shortcuts__shortcut--text">Watch</span>
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-store-2-line"></i>
+                <span class="facebook-shortcuts__shortcut--text"
+                  >Marketplace</span
+                >
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-history-fill"></i>
+                <span class="facebook-shortcuts__shortcut--text">Memories</span>
+              </li>
+            </ul>
+
+            <h4 class="seperator">Your shortcuts</h4>
+            <ul class="facebook-favorites">
+              <li class="facebook-favorites__favorite">
+                <div class="favorite-img">
+                  <img src="/assets/image/user-img.jpg" alt="" />
+                </div>
+                <span class="favorite-text">أنا</span>
+              </li>
+              <li class="facebook-favorites__favorite">
+                <div class="favorite-img">
+                  <img src="/assets/image/IMG2.jpg" alt="" />
+                </div>
+                <span class="favorite-text">سجاد حسن</span>
+              </li>
+              <li class="facebook-favorites__favorite">
+                <div class="favorite-img">
+                  <img src="/assets/image/IMG3.jpg" alt="" />
+                </div>
+                <span class="favorite-text">علي حسن</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="page-content__middle">
+          <div class="wrapper">
+            <div class="stories">
+              <div class="story story-1">
+                <img
+                  src="/assets/image/user-img.jpg"
+                  class="img-rounded"
+                  alt="user images"
+                />
+                <div class="story__username">Me</div>
+              </div>
+              <div class="story story-2">
+                <img
+                  src="/assets/image/contact1.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="story__username">Mom</div>
+              </div>
+              <div class="story story-3">
+                <img
+                  src="/assets/image/contact2.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="story__username">Dad</div>
+              </div>
+              <div class="story story-4">
+                <img
+                  src="/assets/image/contact3.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="story__username">Uncle H</div>
+              </div>
+              <div class="story story-5">
+                <img
+                  src="/assets/image/contact4.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="story__username">Uncle M</div>
+              </div>
+              <div class="story story-6">
+                <img
+                  src="/assets/image/contact5.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="story__username">Kevin</div>
+              </div>
+            </div>
+            <div class="create-posts">
+              <div class="create-post">
+                <div class="input-box__text">
+                  <div class="user">
+                    <img
+                      src="data:image/jpeg;base64,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"
+                      alt=""
+                      class="create-post__image"
+                    />
+                  </div>
+
+                  <label for="create-post">
+                    <input
+                      type="text"
+                      id="create-post"
+                      placeholder="What's on your mind?"
+                    />
+                  </label>
+                </div>
+
+                <img class="add-img" src="/assets/image/image.png" alt="" />
+              </div>
+            </div>
+
+            <div class="facebook-posts"></div>
+          </div>
+        </section>
+
+        <section class="page-content__right">
+          <div class="wrapper">
+            <h4>Sponsered</h4>
+            <div class="facebook-sponsers">
+              <div class="facebook-sponsers__sponser">
+                <img
+                  src="/assets/image/ad1.avif"
+                  alt=""
+                  class="facebook-sponsers__sponser--image"
+                />
+                <div class="facebook-sponsers__sponser--text">
+                  A hamburger, or simply burger, is a food consisting of
+                  fillingsusually a patty of ground meat.
+                </div>
+              </div>
+              <div class="facebook-sponsers__sponser">
+                <img
+                  src="/assets/image/ad2.avif"
+                  alt=""
+                  class="facebook-sponsers__sponser--image"
+                />
+                <div class="facebook-sponsers__sponser--text">
+                  KFC (also commonly referred to by its historical name Kentucky
+                  Fried Chicken) is an American fast.
+                </div>
+              </div>
+            </div>
+
+            <h4 class="seperator">Your Pages</h4>
+
+            <div class="facebook-pages">
+              <div class="facebook-pages__page">
+                <img
+                  src="/assets/image/page1.jpg"
+                  alt=""
+                  class="facebook-pages__page--image"
+                  width="100%"
+                />
+                <div class="facebook-pages__page--text">Dragon Ball</div>
+              </div>
+
+              <div class="facebook-pages__page">
+                <img
+                  src="/assets/image/page2.jpg"
+                  alt=""
+                  class="facebook-pages__page--image"
+                  width="100%"
+                />
+                <div class="facebook-pages__page--text">One piece</div>
+              </div>
+
+              <div class="facebook-pages__page">
+                <img
+                  src="/assets/image/page3.jpg"
+                  alt=""
+                  class="facebook-pages__page--image"
+                  width="100%"
+                />
+                <div class="facebook-pages__page--text">Naruto</div>
+              </div>
+            </div>
+
+            <h4 class="seperator">Contacts</h4>
+
+            <div class="facebook-contacts">
+              <!-- start 1 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact1.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Mom</div>
+              </div>
+              <!-- end 1 -->
+
+              <!-- start 2 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact2.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Dad</div>
+              </div>
+              <!-- end 2 -->
+
+              <!-- start 3 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact3.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Uncle H</div>
+              </div>
+              <!-- end 3 -->
+
+              <!-- start 4 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact4.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Uncle M</div>
+              </div>
+              <!-- end 4 -->
+
+              <!-- start 5 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact5.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Kevin Bff</div>
+              </div>
+              <!-- end 5 -->
+
+              <!-- start 6 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact6.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Sajad</div>
+              </div>
+              <!-- end 6 -->
+
+              <!-- start 7 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact7.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Ali</div>
+              </div>
+              <!-- end 7 -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/assets/firebase.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+@function rem($value){
+    $remValue: $value;
+    @if(type-of($value) == number){
+        $remValue: ($value / 16) + rem;
+    }
+   
+    @return $remValue;
+}
+$primary-font:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+$primary-background: #f0f0f0;
+$icon-color:#656565;
+$icon-background: #e4e4e4;
+$active-color: #1b75e5;
+
+$primary-padding: rem(10);
+$sidebar-width: rem(360);
+$feed-width: rem(680);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: $primary-background;
+    font-family: $primary-font;
+    &::before {
+
+        content: '';
+        display: block;
+        height: 80px;
+    }
+    a {
+        text-decoration: none;
+        color: none;
+    }
+}
+@media screen and (max-width:500px){
+   
+    body::before {
+    content: '';
+    display: block;
+    height: 120px;
+    
+}
+}
+
+
+
+@mixin flex($justify:center, $align:center, $gap:10) {
+     display: flex;
+     justify-content: $justify;
+     align-items: $align;
+     gap: rem($gap);
+
+}
+
+@mixin round-box($size, $bg-color) {
+    border: none;   
+    height: rem($size);
+    border-radius: rem($size / 2);
+    padding: rem($size / 2);
+    background-color: $bg-color
+   }
+
+   @mixin img-rounded($size){
+    width: rem($size);
+    height: rem($size);
+    border-radius: 50%;
+    object-fit: cover;
+   }
+   @mixin circle-icon($size){
+    width: rem($size);
+    height: rem($size);
+    border-radius: 50%;
+   }
+
+   %content-component {
+    @include flex(left, center, 5);
+    padding: rem(5)  0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+.mobile-swim-slide {
+    
+    position: fixed;
+    height: 400vh;
+    width: 200vw;
+    background-color: #fff;
+    z-index: 9999;
+    max-width: 0;
+    overflow-y: auto;
+    max-height: 400vh;
+    padding-bottom: 10px;
+hr {
+    margin: 10px 0;
+}
+i{
+    font-size: 1.4rem;
+}
+    .profile-box {
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        padding: 5px;
+        margin: 8px;
+        width: 80%;
+        border-radius: 5px;
+        box-shadow: 3px 2px 3px 2px rgba(0, 0, 0, 0.199);
+        background-color: whitesmoke;
+    }
+    .user-img-name {
+        @include flex(start);  
+        font-size: 1.4rem;
+    }
+    .user-img-name-arrow {
+        width: 100%;
+        @include flex(space-between);  
+
+        }
+    .profile-box__img {
+        width: 5rem;
+        max-height: 5.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .arrow-div {
+        @include flex();
+        font-size: 1.4rem;
+        background-color: $icon-background;
+        @include circle-icon(40)
+    }
+
+    .create-account {
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
+        margin: 8px;
+        padding: 10px;
+        align-items: center;
+        width: 100%;
+    }
+    .plus-icon {
+        padding: 10px;
+        margin: 10px;
+        @include flex();
+        font-size: 1.4rem;
+        background-color: $icon-background;
+        @include circle-icon(40)
+    }
+    .shortcuts{
+        opacity: 0;
+        display: flex;
+        justify-content: baseline;
+        width: 100%;
+        margin-left: 10px;
+        flex-wrap: wrap;
+        
+        .shortcuts__shortcut {
+            border-radius: 5px;
+            padding: 10px;
+            
+            margin: 8px;
+            display: flex;
+            box-shadow: 3px 2px 3px 2px rgba(0, 0, 0, 0.199);
+            
+            flex-direction: column;
+            justify-content: start;
+            width: 32%;
+            background-color: whitesmoke;
+        }
+    }
+    .more-settings {
+        // opacity: 0;
+        display: flex;
+        // align-items: ;
+        justify-content: start;
+        width: 100%;
+        
+        flex-direction: column;
+        
+    .more-settings__setting {
+        border-radius: 5px;
+        padding: 10px;     
+        margin: 8px;
+        display: flex;
+        box-shadow: 3px 2px 3px 2px rgba(0, 0, 0, 0.199);
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 69%;
+        background-color: whitesmoke;
+        p{
+            padding: 10px;
+        }
+    }
+
+    }
+}

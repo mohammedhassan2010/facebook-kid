@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="./script.js" defer></script>
+
+    <link rel="stylesheet" href="../scss/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>FaceBook</title>
+  </head>
+
+  <body>
+    <div class="containr">
+      <div>
+        <div class="mobile-swim-slide"></div>
+        <nav class="nav">
+          <div class="nav__left">
+            <div class="input-box__text">
+              <div class="facebook-logo">
+                <img
+                  src="/assets/image/facebookKids.png "
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </div>
+              <div class="responsive-icons">
+                <div class="responsive-icons__icon">
+                  <i class="ri-search-line"></i>
+                </div>
+                <div class="responsive-icons__icon">
+                  <i class="ri-add-line"></i>
+                </div>
+                <div class="responsive-icons__icon">
+                  <i class="ri-messenger-fill"></i>
+                </div>
+              </div>
+
+              <label for="search-input">
+                <input
+                  type="search"
+                  id="search-input"
+                  placeholder="Search Facebook"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="nav__middle">
+            <div class="facebook-icons">
+              <div class="facebook-icons__icon home">
+                <a href="/index.html">
+                  <i class="ri-home-fill"></i>
+                </a>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-movie-line active video"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-store-2-line store"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-contacts-fill contact"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-microsoft-line wind"></i>
+              </div>
+              <div class="facebook-icons__icon">
+                <i class="ri-menu-fill menu"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav__right">
+            <div class="facebook-services">
+              <div class="user-icon , dropdown">
+                <!-- <a href="./sign in/index.html"> -->
+                <button class="sign">Sign Up</button>
+                <!-- </a> -->
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-grid-line"></i>
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-messenger-fill"></i>
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-notification-4-fill"></i>
+              </div>
+              <div class="facebook-services__service">
+                <i class="ri-arrow-down-s-fill"></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="page-content">
+        <section class="page-content__left">
+          <div class="wrapper">
+            <ul class="facebook-shortcuts">
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-user-fill"></i>
+                <span class="facebook-shortcuts__shortcut--text">Friends</span>
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-group-2-line"></i>
+                <span class="facebook-shortcuts__shortcut--text">Groups</span>
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-movie-line"></i>
+                <span class="facebook-shortcuts__shortcut--text">Watch</span>
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-store-2-line"></i>
+                <span class="facebook-shortcuts__shortcut--text"
+                  >Marketplace</span
+                >
+              </li>
+              <li class="facebook-shortcuts__shortcut">
+                <i class="ri-history-fill"></i>
+                <span class="facebook-shortcuts__shortcut--text">Memories</span>
+              </li>
+            </ul>
+
+            <h4 class="seperator">Your shortcuts</h4>
+            <ul class="facebook-favorites">
+              <li class="facebook-favorites__favorite">
+                <div class="favorite-img">
+                  <img src="/assets/image/user-img.jpg" alt="" />
+                </div>
+                <span class="favorite-text">أنا</span>
+              </li>
+              <li class="facebook-favorites__favorite">
+                <div class="favorite-img">
+                  <img src="/assets/image/IMG2.jpg" alt="" />
+                </div>
+                <span class="favorite-text">سجاد حسن</span>
+              </li>
+              <li class="facebook-favorites__favorite">
+                <div class="favorite-img">
+                  <img src="/assets/image/IMG3.jpg" alt="" />
+                </div>
+                <span class="favorite-text">علي حسن</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="page-content__middle">
+          <div class="wrapper">
+            <select>
+              <option value="all">All</option>
+              <option value="cartoon">Cartoon</option>
+              <option value="gameTrailer">Game Trailer</option>
+            </select>
+            <div class="facebook-posts">
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">حمدون الحلقة الخامسة</p>
+                <iframe
+                  class="post-img"
+                  width="991"
+                  height="559"
+                  src="https://www.youtube.com/embed/Uuq-vjpS0wM"
+                  title="كرتون حمدون حلقة 5"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">كرتون كسلان - حقيقة مرض كسلان</p>
+                <iframe
+                  class="post-img"
+                  width="994"
+                  height="559"
+                  src="https://www.youtube.com/embed/Ma0DfX-Bs60"
+                  title="كرتون كسلان - حقيقة مرض كسلان - قناة ماجد Majid Kids TV"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">كرتون كسلان- مخلوق الكهف ج2</p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/BPr9DbiRFxE"
+                  title="كرتون كسلان- مخلوق الكهف ج2- قناة ماجد Majid Kids TV"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">مسلسل منصور | البحث عن غول الجليد</p>
+                <iframe
+                  class="post-img"
+                  width="994"
+                  height="559"
+                  src="https://www.youtube.com/embed/TSKSqwezec4"
+                  title="S2 E7 مسلسل منصور | البحث عن غول الجليد | Mansour Cartoon | Yeti Hunters"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">كرتون أمونة - الكذب ج1</p>
+                <iframe
+                  class="post-img"
+                  width="994"
+                  height="559"
+                  src="https://www.youtube.com/embed/RxT6EF7GaVw"
+                  title="كرتون أمونة - الكذب ج1 - قناة ماجد  Majid Kids TV"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">امونة المزيونة سلحفاتي</p>
+                <iframe
+                  class="post-img"
+                  width="994"
+                  height="559"
+                  src="https://www.youtube.com/embed/dMu0IaaL-tA"
+                  title="امونة المزيونة    سلحفاتي"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">
+                  كرتون اطفال: مسلسل مغامرات الشاب حمدون الحلقة 7
+                </p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/LCOTJ0VaxBY"
+                  title="كرتون اطفال: مسلسل مغامرات الشاب حمدون الحلقة 7"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">النقيب خلفان ملخص حلقه🦂العقرب🦂</p>
+                <iframe
+                  width="994"
+                  height="559"
+                  src="https://www.youtube.com/embed/mU3MtghdFTc"
+                  title="النقيب خلفان ملخص حلقه🦂العقرب🦂"
+                  class="post-img"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">مغامرات منصور | حلقات منصور وعبيد</p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/xL-auwbp71g"
+                  title="مغامرات منصور | حلقات منصور وعبيد l | Mansour&#39;s Adventures | Mansour &amp; Obaid"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">كرتون كسلان: كسلان والبولينغ</p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/8ymoLHoFn_s"
+                  title="كرتون كسلان: كسلان والبولينغ | رسوم متحركة للأطفال"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">النقيب خلفان ٣ - الحلقة ١ - لغز الحفل</p>
+                <iframe
+                  width="994"
+                  height="559"
+                  src="https://www.youtube.com/embed/lTlLKs3mEtA"
+                  title="النقيب خلفان ٣ - الحلقة ١ - لغز الحفل - مدبلج فصحى 1080p (حصرياً)"
+                  class="post-img"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">
+                  Dragon Ball Z: Kakarot - Opening Movie Trailer |PS4
+                </p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/rk-wIgg9fNk"
+                  title="Dragon Ball Z: Kakarot - Opening Movie Trailer |PS4"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">
+                  Dragon Ball FighterZ - Launch Trailer | PS4
+                </p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/LwdLKPumEaU"
+                  title="Dragon Ball FighterZ - Launch Trailer | PS4"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">
+                  Launch Trailer - Dragon Ball XENOVERSE 2 | PS4, X1, Steam
+                </p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/JnUbg-9v_bE"
+                  title="Launch Trailer - Dragon Ball XENOVERSE 2 | PS4, X1, Steam"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">
+                  Gameplay Reveal Trailer | Call of Duty: Modern Warfare III
+                </p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/mHDEDDrGYvo"
+                  title="Gameplay Reveal Trailer | Call of Duty: Modern Warfare III"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">
+                  SpongeBob SquarePants: The Cosmic Shake - Release Trailer |
+                  PS4 Games
+                </p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/3vqy9NmiWAE"
+                  title="SpongeBob SquarePants: The Cosmic Shake - Release Trailer | PS4 Games"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="facebook-posts__post">
+                <div class="profile">
+                  <div class="profile-information">
+                    <a href="/password.html"
+                      ><img
+                        class="profile-img"
+                        src="https://vcap.vn/public/admin/img/avatar.png"
+                    /></a>
+                    <div>
+                      <h4 class="sender-name">admin</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="post-text">
+                  Poppy Playtime: Chapter 3 - Teaser Trailer
+                </p>
+                <iframe
+                  width="994"
+                  height="559"
+                  class="post-img"
+                  src="https://www.youtube.com/embed/eQ35V-wxHqY"
+                  title="Poppy Playtime: Chapter 3 - Teaser Trailer #2"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-content__right">
+          <div class="wrapper">
+            <h4>Sponsered</h4>
+            <div class="facebook-sponsers">
+              <div class="facebook-sponsers__sponser">
+                <img
+                  src="/assets/image/ad1.avif"
+                  alt=""
+                  class="facebook-sponsers__sponser--image"
+                />
+                <div class="facebook-sponsers__sponser--text">
+                  A hamburger, or simply burger, is a food consisting of
+                  fillingsusually a patty of ground meat.
+                </div>
+              </div>
+              <div class="facebook-sponsers__sponser">
+                <img
+                  src="/assets/image/ad2.avif"
+                  alt=""
+                  class="facebook-sponsers__sponser--image"
+                />
+                <div class="facebook-sponsers__sponser--text">
+                  KFC (also commonly referred to by its historical name Kentucky
+                  Fried Chicken) is an American fast.
+                </div>
+              </div>
+            </div>
+
+            <h4 class="seperator">Your Pages</h4>
+
+            <div class="facebook-pages">
+              <div class="facebook-pages__page">
+                <img
+                  src="/assets/image/page1.jpg"
+                  alt=""
+                  class="facebook-pages__page--image"
+                  width="100%"
+                />
+                <div class="facebook-pages__page--text">Dragon Ball</div>
+              </div>
+
+              <div class="facebook-pages__page">
+                <img
+                  src="/assets/image/page2.jpg"
+                  alt=""
+                  class="facebook-pages__page--image"
+                  width="100%"
+                />
+                <div class="facebook-pages__page--text">One piece</div>
+              </div>
+
+              <div class="facebook-pages__page">
+                <img
+                  src="/assets/image/page3.jpg"
+                  alt=""
+                  class="facebook-pages__page--image"
+                  width="100%"
+                />
+                <div class="facebook-pages__page--text">Naruto</div>
+              </div>
+            </div>
+
+            <h4 class="seperator">Contacts</h4>
+
+            <div class="facebook-contacts">
+              <!-- start 1 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact1.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Mom</div>
+              </div>
+              <!-- end 1 -->
+
+              <!-- start 2 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact2.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Dad</div>
+              </div>
+              <!-- end 2 -->
+
+              <!-- start 3 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact3.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Uncle H</div>
+              </div>
+              <!-- end 3 -->
+
+              <!-- start 4 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact4.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Uncle M</div>
+              </div>
+              <!-- end 4 -->
+
+              <!-- start 5 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact5.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Kevin Bff</div>
+              </div>
+              <!-- end 5 -->
+
+              <!-- start 6 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact6.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Sajad</div>
+              </div>
+              <!-- end 6 -->
+
+              <!-- start 7 -->
+              <div class="facebook-contacts__contact">
+                <img
+                  src="/assets/image/contact7.jpg"
+                  alt=""
+                  class="facebook-contacts__contact--image"
+                  width="100%"
+                />
+                <div class="facebook-contacts__contact--text">Ali</div>
+              </div>
+              <!-- end 7 -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="/assets/firebase.js"></script>
+  </body>
+</html>
